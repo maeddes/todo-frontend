@@ -30,7 +30,6 @@ public class TodoFrontendApplication {
 	@PostMapping
 	public String addItem(String toDo){
 
-
 		ResponseEntity<String> response = template.postForEntity(endpoint+"/todos/"+toDo, null, String.class);
 		return "redirect:/";
 
